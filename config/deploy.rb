@@ -8,7 +8,7 @@ set :repo_url, 'git@github.com:vadia2pac/pushkin-contest-bot.git'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/var/www/pushkin'
+set :deploy_to, '/var/www/pushkin/'
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
