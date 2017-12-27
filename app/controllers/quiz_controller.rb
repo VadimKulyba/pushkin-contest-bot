@@ -22,16 +22,24 @@ class QuizController < ApplicationController
     when 2
       answer = level_2_3_4_5(del(params[:question]).split(' '))[1]
     when 3
-      questions = params[:question].split('\n')
-      questions.each do |question|
-        answer += ',' if questions.index(question) != 0
-        answer += level_2_3_4_5(del(question).split(' '))[1]
+      begin
+        questions = params[:question].split('\n')
+        questions.each do |question|
+          answer += ',' if questions.index(question) != 0
+          answer += level_2_3_4_5(del(question).split(' '))[1]
+        end
+      rescue TypeError
+        answer = ','
       end
     when 4 # not correct, repeat code
-      questions = params[:question].split('\n')
-      questions.each do |question|
-        answer += ',' if questions.index(question) != 0
-        answer += level_2_3_4_5(del(question).split(' '))[1]
+      begin
+        questions = params[:question].split('\n')
+        questions.each do |question|
+          answer += ',' if questions.index(question) != 0
+          answer += level_2_3_4_5(del(question).split(' '))[1]
+        end
+      rescue TypeError
+        answer = ','
       end
     when 5
       array = level_2_3_4_5(del(params[:question]).split(' '))
