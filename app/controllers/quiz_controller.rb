@@ -23,7 +23,8 @@ class QuizController < ApplicationController
       answer = level_2_3_4_5(del(params[:question]).split(' '))[1]
     when 3
       begin
-        questions = params[:question].split('\n')
+        questions = params[:question].split("\n")
+        p questions
         questions.each do |question|
           answer += ',' if questions.index(question) != 0
           answer += level_2_3_4_5(del(question).split(' '))[1]
@@ -33,7 +34,7 @@ class QuizController < ApplicationController
       end
     when 4 # not correct, repeat code
       begin
-        questions = params[:question].split('\n')
+        questions = params[:question].split("\n")
         questions.each do |question|
           answer += ',' if questions.index(question) != 0
           answer += level_2_3_4_5(del(question).split(' '))[1]
