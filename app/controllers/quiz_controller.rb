@@ -113,7 +113,7 @@ class QuizController < ApplicationController
 
   # for string methods
   def del(str)
-    str.gsub(/[,?.!:+-=*_@#()^;№'<>~`«»—]/, '')
+    str.gsub(/[,?.!:+-=*_@#()^;№'<>~`«»—〈〉]/, '')
   end
 
   def minus(st, cr)

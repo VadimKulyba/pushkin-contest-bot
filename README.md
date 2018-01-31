@@ -1,24 +1,7 @@
-# README
+Pushkin Contest Bot
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Написал для сорревнование ботов на знание творчества А.С.Пушкина, 
+по принципу пришел запрос нужно как можно быстрее отдать ответ в соответствии с правилами уровня;
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Правила игры:
+![Image alt](https://github.com/vadia2pac/pushkin-contest-bot/raw/master/rules.PNG)
